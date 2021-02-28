@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    min-height: 100vh;
+}
+
+.wrap {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.square {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: white;
+    animation: square 8s infinite linear;
+}
+
+@keyframes square {
+    0% {
+        top: 20px;
+        left: 20px;
+    }
+
+    25% {
+        top: 20px;
+        left: calc(100% - 120px);
+    }
+
+    50% {
+        top: calc(100% - 120px);
+        left: calc(100% - 120px);
+        border-radius: 50%;
+
+    }
+
+    75% {
+        top: calc(100% - 120px);
+        left: 20px;
+    }
+
+    100% {
+        top: 20px;
+        left: 20px;
+        transform: rotate(720px);
+        border-radius: 0;
+    }
+}
